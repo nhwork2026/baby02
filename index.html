@@ -21,7 +21,16 @@ import {initializeApp} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-
 import {getFirestore,doc,getDoc,getDocs,setDoc,updateDoc,deleteDoc,collection,addDoc,query,orderBy,where,limit,onSnapshot,serverTimestamp,Timestamp} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 import {getAuth,signInAnonymously} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 // REPLACE WITH YOUR NEW FIREBASE TEST PROJECT CONFIG
-const firebaseConfig={apiKey:"YOUR_API_KEY",authDomain:"YOUR_PROJECT.firebaseapp.com",projectId:"YOUR_PROJECT",appId:"YOUR_APP_ID",messagingSenderId:"YOUR_SENDER_ID"};
+const firebaseConfig = {
+  apiKey: "AIzaSyAlm6xDsRGpMS38_P8qlajzQYqctIzlcCo",
+  authDomain: "baby02-d6187.firebaseapp.com",
+  projectId: "baby02-d6187",
+  storageBucket: "baby02-d6187.firebasestorage.app",
+  messagingSenderId: "392902961283",
+  appId: "1:392902961283:web:99e81bf8ee43b57d1cd3b6",
+  measurementId: "G-KYG3BP6J4K"
+};
+//const firebaseConfig={apiKey:"YOUR_API_KEY",authDomain:"YOUR_PROJECT.firebaseapp.com",projectId:"YOUR_PROJECT",appId:"YOUR_APP_ID",messagingSenderId:"YOUR_SENDER_ID"};
 const app=initializeApp(firebaseConfig),db=getFirestore(app),auth=getAuth(app),$=id=>document.getElementById(id);
 const FAMILY_KEY="baby-care-v33-test-family",DEFAULTS={defaultMilkOz:3,defaultMilkType:"นมแม่ปั๊ม",hungerIntervalMin:180,wakeTime:"07:00",sleepTime:"20:00"},CARE_NAMES={poop:"💩 อึ",pee:"💧 ฉี่",spitup:"🤮 แหวะนม"},COLORS=["#3867e8","#10a88a","#f59e0b","#ef6c8f","#8b5cf6","#16a3c7","#94a3b8"];
 let familyId="",familyData={},activePage="home",generation=0,periodDays=7,dayKey="";
